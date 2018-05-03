@@ -115,7 +115,7 @@ ul{
     width: 70%;
 }
 .content ul li{
-    font-size: 14px;
+    font-size: 12px;
 }
 .th-project{
     height: 200px;
@@ -402,7 +402,51 @@ li{
     margin-top: 10px;
     padding: 0px;
     }
-  
+    
+     .slick-prev:before, .slick-next:before { color:#000; height:100px; width:30px;}
+    
+    .slick-prev:before {
+                content:none;
+    }
+    .slick-next,.slick-prev,.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus { 
+        height:30px;  
+        width:30px;background-image:url('../img/pre_arr.png'); 
+        background-position:right; background-size:contain;
+      transition: all 0.7s linear;
+      -webkit-transition: all 0.7s linear;
+      -moz-transition: all 0.7s linear;
+      -o-transition: all 0.7s linear;
+      -ms-transition: all 0.7s linear;
+    
+    }
+    .slick-next, .slick-next:hover, .slick-next:focus{
+        transform: scaleX(-1);-webkit-transform: scaleX(-1);
+    }
+    .slick-next:hover {background-image:url('../img/pre_arr.png'); transform: scaleX(-1);-webkit-transform: scaleX(-1);}
+    .slick-prev,.slick-prev,.slick-prev:hover, .slick-prev:focus {background-image:url('../img/pre_arr.png'); }
+    .slick-prev:hover {background-image:url('../img/pre_arr.png'); }
+    .slick-next:before,.slick-prev:before {
+           content:none;
+    }
+    
+    /* slider setup */
+    .slick-slider {
+        margin-bottom: 0;
+        position:relative;
+    }
+    ul.slickslide {
+        padding-left:0;
+        max-width:100%;
+    }
+    ul.slickslide li img {
+        width:100%;
+        height:auto;
+    }
+     
+    /* loading issue fix; https://github.com/kenwheeler/slick/issues/790 */
+    .slick-slider .slick-track {
+        min-width:100%;
+    }
 @media (min-width: 1200px){
     .container {
         width: 970px;
